@@ -128,3 +128,53 @@ body {
 .sub-categories li{
   padding: 0 40px;
 }
+
+.content {
+  display: grid;
+  grid-template-columns: 250px 3fr;
+  grid-gap: 10px;
+}
+
+.sidebar , .books {
+  padding: 2em;
+}
+
+.sidebar-section {
+  background: white;
+  padding: 10px;
+}
+
+.section-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-list li:first-child {
+  border-top: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.section-list li {
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.section-list a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 5px;
+}
+
+.section-list a:hover {
+  background: #e5e5e5;
+}
+
+.show-more {
+  display: inline-block;
+  color: #4285f4;
+  font-weight: bold;
+  padding-top: 10px;
+}
