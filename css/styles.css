@@ -99,15 +99,17 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 42px;
   z-index: 1;
   width: 500px;
-  padding: 0;
-  /* border: 1px solid red; */
+  padding: 0 10px;
+  border: 1px solid #222e3d;
+  font-size: .8em;
+  background: white;
 }
 
-.dropdown-content li {
-  /* padding: 10px; */
+.dropdown-content a:hover {
+  font-weight: bold;
 }
 
 .dropdown-button:hover .dropdown-content {
@@ -117,6 +119,10 @@ body {
 
 .sub-categories {
   display: flex;
+}
+
+.sub-categories a:hover {
+  border-bottom: 2px solid #4285F4;
 }
 
 .sub-categories li{
