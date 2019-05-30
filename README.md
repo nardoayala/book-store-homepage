@@ -7,4 +7,4 @@ This is a simple and responsive book store homepage
 - Special subcategories acording to the client needs.
 - Books categorized by genre, author and year.
 - Special offer banner.
-- Books organized by grid.
+- Easy access to some books in the homepage with covers and details like title, author and price.
