@@ -228,3 +228,35 @@ body {
 .book-details {
   line-height: 10px;
 }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin: 0;
+  margin-top: 40px;
+  padding-bottom: 30px;
+  color: white;
+  background: #222E3D;
+  width: 100%;
+}
+
+.useful-links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.useful-links-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.useful-links-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.useful-links-list a:hover {
+  text-decoration: underline;
+}
