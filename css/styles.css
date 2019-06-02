@@ -10,12 +10,13 @@ body {
   background: #222E3D;
   display: flex;
   justify-content: space-between;
+  padding: 0 40px; 
 }
 
 .top-navbar ul {
   display: flex;
   list-style: none;
-  padding: 0 40px;
+  padding: 0;
 }
 
 .top-navbar a {
@@ -117,7 +118,7 @@ body {
 
 .dropdown-button:hover .dropdown-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .sub-categories {
@@ -134,7 +135,7 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns: 300px 900px;
+  grid-template-columns: minmax(auto, 300px) minmax(auto, 900px);
   grid-gap: 10px;
   justify-content: center;
 }
@@ -231,8 +232,9 @@ body {
 
 .footer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(auto, 300px));
   justify-items: center;
+  justify-content: center;
   margin: 0;
   margin-top: 40px;
   padding-bottom: 30px;
@@ -259,4 +261,37 @@ body {
 
 .useful-links-list a:hover {
   text-decoration: underline;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+@media screen and (max-width: 1023px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+  .books {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
 }
