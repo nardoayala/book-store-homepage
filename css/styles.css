@@ -6,6 +6,21 @@ body {
   background: #F0F0F0;
 }
 
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  color: white;
+  z-index: 2;
+}
+
 .top-navbar {
   background: #222E3D;
   display: flex;
@@ -211,6 +226,7 @@ body {
   margin-right: 20px;
   padding-top: 20px;
   border-bottom: 2px solid #e5e5e5;
+  overflow-x: hidden;
 }
 
 .books-wrap {
@@ -292,7 +308,57 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-
+  .burguer-button {
+    display: block;
+  }
+  .top-navbar {
+    position: fixed;
+    background: rgba(38, 61, 74, .9);
+    top: 0;
+    left: -150vw;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .top-navbar.is-active {
+    left: 0;
+  }
+  .header {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .brand {
+    margin: 0;
+    padding: 20px 0;
+  }
+  .advanced-search {
+    display: none;
+  }
+  .bottom-navbar {
+    display: none;
+  }
+  .footer {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: "up up"
+                          "down down";
+    grid-gap: 50px;
+  }
+  .useful-links {
+    text-align: center;
+  }
+  .book-item:nth-last-child(-n + 2) {
+    display:none;
+  }
+  .books-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 480px) {
