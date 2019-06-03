@@ -29,14 +29,20 @@ body {
 .header {
   background: #273647;
   color: white;
-  display: flex;
+  display: grid;
+  grid-template-columns: .8fr 2fr .8fr;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
 }
 
+.book-search {
+  display: flex;
+  width: 100%;
+}
+
 .search-input {
-  width: 600px;
+  width: 100%;
   height: 44px;
   outline: 0;
   padding: 0 10px;
@@ -51,6 +57,7 @@ body {
   height: 44px;
   line-height: 44px;
   padding: 0 20px;
+  margin: auto;
 }
 
 .btn {
