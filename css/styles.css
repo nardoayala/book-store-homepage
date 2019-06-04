@@ -6,6 +6,24 @@ body {
   background: #F0F0F0;
 }
 
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  color: white;
+}
+
+.responsive-menu {
+  display: none;
+}
+
 .top-navbar {
   background: #222E3D;
   display: flex;
@@ -246,6 +264,7 @@ body {
   justify-content: center;
   margin: 0;
   margin-top: 40px;
+  padding-top: 30px;
   padding-bottom: 30px;
   color: white;
   background: #222E3D;
@@ -306,12 +325,35 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .burguer-button {
+    display: block;
+    z-index: 2;
+  }
+  .top-navbar {
+    display: none;
+  }
+  .bottom-navbar {
+    display: none;
+  }
+  .responsive-menu {
+    position: fixed;
+    background: rgba(38, 61, 74, .9);
+    top: 0;
+    left: -100vw;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .responsive-menu.is-active {
+    left: 0;
+  }
   .footer {
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 200px 200px;
-    grid-template-areas: "up up"
-                          "down down";
-    grid-gap: 50px;
+    display: block;
   }
   .useful-links {
     text-align: center;
@@ -322,12 +364,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .top-navbar {
-    display: none;
-  }
-  .bottom-navbar {
-    display: none;
-  }
   .header .btn {
     display: none;
   }
