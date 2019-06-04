@@ -24,6 +24,22 @@ body {
   display: none;
 }
 
+.responsive-list {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  color: white;
+  list-style: none;
+}
+
+.responsive-list a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .top-navbar {
   background: #222E3D;
   display: flex;

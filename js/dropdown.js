@@ -6,10 +6,8 @@ ipad.addListener(validation)
 
 function validation(event) {
     if (event.matches) {
-        console.log(event)
         burgerButton.addEventListener('click', hideShow)
     }else {
-        console.log(event)
         burgerButton.removeEventListener('click', hideShow)
       }
 }
