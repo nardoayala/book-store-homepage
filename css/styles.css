@@ -316,18 +316,31 @@ body {
   .useful-links {
     text-align: center;
   }
-  /* .book-item:nth-last-child(-n + 2) {
-    display:none;
+  .books {
+    padding: 0;
   }
-  .books-wrap {
-    grid-template-columns: repeat(3, 1fr);
-  } */
 }
 
 @media screen and (max-width: 480px) {
-
+  .top-navbar {
+    display: none;
+  }
+  .bottom-navbar {
+    display: none;
+  }
+  .header .btn {
+    display: none;
+  }
+  .special-offer {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-
+  .footer {
+    display: block;
+  }
+  .special-offer {
+    font-size: 10px;
+  }
 }
