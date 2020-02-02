@@ -260,7 +260,7 @@ body {
   flex-direction: column;
   width: 160px;
   height: 360px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -275,8 +275,23 @@ body {
 }
 
 .book-details {
-  line-height: 10px;
   text-transform: capitalize;
+  font-size: 12px;
+}
+
+.book-details__title {
+  margin: 0;
+}
+
+.book-details__author {
+  margin: 0;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.book-details__price {
+  margin: 0;
+  margin-top: 5px;
 }
 
 .footer {
