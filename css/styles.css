@@ -250,7 +250,7 @@ body {
 
 .books-wrap {
   display: grid;
-  grid-template-columns: repeat(15, 200px);
+  grid-template-columns: repeat(10, 200px);
   justify-items: center;
   overflow: auto;
 }

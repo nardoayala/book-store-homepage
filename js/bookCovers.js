@@ -1,34 +1,24 @@
 ***REMOVED***
-const nytimesUrl = "https://api.nytimes.com/svc/books/v3/lists.json";
-***REMOVED***
-const googleUrl = "https://www.googleapis.com/books/v1/volumes?q=isbn:";
+const url = "https://www.googleapis.com/books/v1/volumes?q=subject:";
 
-async function getBestSellers(url, genre, apiKey) {
+async function getBooks(url, genre, apiKey) {
   const response = await fetch(
-    url + "?list-name=" + genre + "&api-key=" + apiKey,
-    { method: "get" }
+    url + genre + "&langRestrict=en&printType=books&key=" + apiKey
   );
   const data = await response.json();
-  return data.results;
+  console.log(data.items);
+  return data.items;
 }
 
-// Uncomment to see avaliable lists
-// (async function getList() {
-//   const response = await fetch(
-//     "https://api.nytimes.com/svc/books/v3/lists/names.json?list-name=&api-key=6AmUtE3Vuezd3dhhRUAIsG0QYmZJxHeE"
-//   );
-//   const data = await response.json();
-//   console.log(data);
-// })();
-
-async function getThumbnails(url, isbn, apiKey) {
-  const response = await fetch(url + isbn + "&key=" + apiKey, {
-    method: "get",
-  });
-  const data = await response.json();
-  if (data.items) {
-    return data.items[0].volumeInfo.imageLinks.thumbnail;
+async function cacheExist(genre) {
+  let listName = `${genre}List`;
+  let cacheList = window.localStorage.getItem(listName);
+  if (cacheList) {
+    return JSON.parse(cacheList);
   }
+  let bookDetails = await getBooks(url, genre, apiKey);
+  window.localStorage.setItem(listName, JSON.stringify(bookDetails));
+  return bookDetails;
 }
 
 function booksWrapTemplate(title, author, thumbnail) {
@@ -46,12 +36,11 @@ function booksWrapTemplate(title, author, thumbnail) {
 async function renderBestSellers(id, genre) {
   let bestSellersWrap = document.getElementById(id);
 
-  const bookDetails = await getBestSellers(nytimesUrl, genre, nytimesApiKey);
+  const bookDetails = await cacheExist(genre);
   for (book in bookDetails) {
-    let title = bookDetails[book].book_details[0].title;
-    let author = bookDetails[book].book_details[0].author;
-    let isbn = bookDetails[book].isbns[0].isbn13;
-    let thumbnail = await getThumbnails(googleUrl, isbn, googleApiKey);
+    const title = bookDetails[book].volumeInfo.title.toLowerCase();
+    const author = bookDetails[book].volumeInfo.authors[0];
+    const thumbnail = bookDetails[book].volumeInfo.imageLinks.thumbnail;
     let bookItem = document.createElement("div");
     bookItem.className = "book-item";
     bookItem.innerHTML = booksWrapTemplate(title, author, thumbnail);
@@ -59,6 +48,6 @@ async function renderBestSellers(id, genre) {
   }
 }
 
-renderBestSellers("nonfiction", "hardcover-nonfiction");
-renderBestSellers("fiction", "hardcover-fiction");
-renderBestSellers("science", "science");
+renderBestSellers("nonfiction", "nonfiction");
+renderBestSellers("fiction", "fiction");
+renderBestSellers("mystery", "mystery");
