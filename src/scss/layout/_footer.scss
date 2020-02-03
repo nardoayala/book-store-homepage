@@ -1,0 +1,32 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 300px));
+  justify-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  background: $color-secondary;
+  width: 100%;
+}
+
+.useful-links {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

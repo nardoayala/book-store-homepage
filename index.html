@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body>
     <i class="fas fa-bars burguer-button" id="burguer-button"></i>
@@ -66,9 +66,9 @@
     <nav class="bottom-navbar" id="bottom-navbar">
       <div class="container">
         <ul class="dropdown-menu">
-          <li class="dropdown-button">
+          <li class="dropdown-menu__button">
             <a href="#">Categories &#9660;</a>
-            <ul class="dropdown-content">
+            <ul class="dropdown-menu__content">
               <li><a href="#">Category 1</a></li>
               <li><a href="#">Category 2</a></li>
               <li><a href="#">Category 3</a></li>
@@ -92,7 +92,7 @@
             </ul>
           </li>
         </ul>
-        <ul class="sub-categories">
+        <ul class="bottom-navbar__sub-categories">
           <li><a href="#">Best Sellers</a></li>
           <li><a href="#">New books</a></li>
           <li><a href="#">Offers</a></li>
@@ -101,9 +101,9 @@
     </nav>
     <div class="content">
       <div class="sidebar">
-        <section class="sidebar-section">
+        <section class="sidebar__section">
           <h3>Popular books</h3>
-          <ul id="popular-books" class="section-list">
+          <ul id="popular-books" class="sidebar__section__list">
             <li><a href="#">Book title</a></li>
             <li><a href="#">Book title</a></li>
             <li><a href="#">Book title</a></li>
@@ -112,9 +112,9 @@
           </ul>
           <a class="show-more" href="#">Show more</a>
         </section>
-        <section class="sidebar-section">
+        <section class="sidebar__section">
           <h3>Favourite Authors</h3>
-          <ul id="favorite-authors" class="section-list">
+          <ul id="favorite-authors" class="sidebar__section__list">
             <li><a href="#">Author's name</a></li>
             <li><a href="#">Author's name</a></li>
             <li><a href="#">Author's name</a></li>
@@ -146,7 +146,7 @@
     <footer class="footer">
       <div class="useful-links">
         <h4>Useful information</h4>
-        <ul class="useful-links-list">
+        <ul class="useful-links__list">
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
@@ -155,7 +155,7 @@
       </div>
       <div class="useful-links">
         <h4>Useful information</h4>
-        <ul class="useful-links-list">
+        <ul class="useful-links__list">
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
@@ -164,7 +164,7 @@
       </div>
       <div class="useful-links">
         <h4>Useful information</h4>
-        <ul class="useful-links-list">
+        <ul class="useful-links__list">
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
@@ -173,7 +173,7 @@
       </div>
       <div class="useful-links">
         <h4>Useful information</h4>
-        <ul class="useful-links-list">
+        <ul class="useful-links__list">
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Useful link</a></li>
@@ -181,7 +181,7 @@
         </ul>
       </div>
     </footer>
-    <script src="js/dropdown.js"></script>
-    <script src="js/bookCovers.js"></script>
+    <script src="dist/js/dropdown.js"></script>
+    <script src="dist/js/bookCovers.js"></script>
   </body>
 </html>

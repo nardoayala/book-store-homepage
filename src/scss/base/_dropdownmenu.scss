@@ -1,0 +1,25 @@
+.dropdown-menu {
+  position: relative;
+  &__content {
+    display: none;
+    position: absolute;
+    top: 42px;
+    z-index: 1;
+    width: 500px;
+    padding: 0 10px;
+    border: 1px solid #222e3d;
+    font-size: 0.8em;
+    background: white;
+    a {
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+  &__button {
+    &:hover .dropdown-menu__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

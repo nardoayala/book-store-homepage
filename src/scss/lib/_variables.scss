@@ -1,0 +1,40 @@
+/*------------------------------------*\
+            $VARIABLES
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand colors
+ */
+
+$color-brand: #273647;
+$color-secondary: #222e3d;
+$color-links: #4285f4;
+/**
+  * Grey Scale
+  * This is mainly to hold back designers from adding 200 different greys ;)
+  */
+$black: rgb(0, 0, 0);
+$darkergrey: lighten(black, 20%);
+$darkgrey: lighten(black, 30%);
+$grey: lighten(black, 45%);
+$lightgrey: lighten(black, 75%);
+$lightergrey: lighten(black, 90%);
+$white: rgb(255, 255, 255);
+
+$color-borders: $lightgrey;
+
+/*------------------------------------*\
+              $FOTNS
+\*------------------------------------*/
+$basefont: "Open Sans", sans-serif;
+
+/*------------------------------------*\
+              $MEDIA QUERIES
+\*------------------------------------*/
+$screen-ipad: "screen and (max-width:1023px)";
+$screen-medium: "screen and (max-width: 767px)";
+$screen-small: "screen and (max-width: 480px)";
+$screen-xsmall: "screen and (max-width: 320px)";

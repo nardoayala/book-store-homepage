@@ -1,0 +1,80 @@
+@media #{$screen-ipad} {
+  .header {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .brand {
+    margin: 0;
+    padding: 20px 0;
+  }
+  .advanced-search {
+    display: none;
+  }
+  .content {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+  .books {
+    padding: 0 40px;
+  }
+}
+
+@media #{$screen-medium} {
+  .burguer-button {
+    display: block;
+    z-index: 2;
+  }
+  .top-navbar {
+    display: none;
+  }
+  .bottom-navbar {
+    display: none;
+  }
+  .responsive-menu {
+    position: fixed;
+    background: rgba(38, 61, 74, 0.9);
+    top: 0;
+    left: -100vw;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  .responsive-menu.is-active {
+    left: 0;
+  }
+  .footer {
+    display: block;
+  }
+  .useful-links {
+    text-align: center;
+  }
+  .books {
+    padding: 0;
+  }
+}
+
+@media #{$screen-small} {
+  .header .btn {
+    display: none;
+  }
+  .special-offer {
+    font-size: 14px;
+  }
+}
+
+@media #{$screen-xsmall} {
+  .footer {
+    display: block;
+  }
+  .special-offer {
+    font-size: 10px;
+  }
+}
