@@ -35,15 +35,19 @@ async function renderBooksWrap(id, genre) {
   let booksWrap = document.getElementById(id);
 
   const bookDetails = await cacheExist(genre);
-  for (book in bookDetails) {
-    const title = bookDetails[book].volumeInfo.title.toLowerCase();
-    const author = bookDetails[book].volumeInfo.authors[0];
-    const thumbnail = bookDetails[book].volumeInfo.imageLinks.thumbnail;
+
+  bookDetails.forEach(element => {
+    const {
+      title,
+      author,
+      imageLinks: { thumbnail },
+    } = element.volumeInfo;
+
     let bookItem = document.createElement("div");
     bookItem.className = "book-item";
     bookItem.innerHTML = booksWrapTemplate(title, author, thumbnail);
     booksWrap.appendChild(bookItem);
-  }
+  });
 }
 
 renderBooksWrap("nonfiction", "nonfiction");
