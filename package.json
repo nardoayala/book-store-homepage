@@ -1,0 +1,25 @@
+{
+  "name": "book-store-homepage",
+  "version": "1.0.0",
+  "description": "This is a simple and responsive book store homepage",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nardoyala/book-store-homepage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nardoyala/book-store-homepage/issues"
+  },
+  "homepage": "https://github.com/nardoyala/book-store-homepage#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
+}

@@ -20,15 +20,18 @@ async function cacheExist(genre) {
 }
 
 function booksWrapTemplate(title, author, thumbnail) {
-  return `<figure class="book-cover-container">
-            <img class="book-cover" src=${thumbnail} alt="book cover">
-            <div class="book-details">
-              <p class="book-details__title">${title}</p>
-              <p class="book-details__author">${author}</p>
-              <p class="book-details__price">Price</p>
-            </div>
-          </figure>
-          <button class="btn" type="button" name="button">Add to Cart</button>`;
+  const view = `
+    <figure class="book-cover-container">
+      <img class="book-cover" src=${thumbnail} alt="book cover">
+      <div class="book-details">
+        <p class="book-details__title">${title}</p>
+        <p class="book-details__author">${author}</p>
+        <p class="book-details__price">Price</p>
+      </div>
+    </figure>
+    <button class="btn" type="button" name="button">Add to Cart</button>
+  `
+  return view;
 }
 
 async function renderBooksWrap(id, genre) {
